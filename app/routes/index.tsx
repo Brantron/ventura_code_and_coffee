@@ -1,6 +1,6 @@
-import type { MetaFunction, LoaderFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
+import type { MetaFunction, LoaderFunction } from "@remix-run/node"
+import { json } from "@remix-run/node"
+import { Link, useLoaderData } from "@remix-run/react"
 
 type IndexData = {
   resources: Array<{ name: string; url: string }>;
@@ -41,23 +41,23 @@ export let loader: LoaderFunction = () => {
         name: "URL Params and Error Boundaries"
       }
     ]
-  };
+  }
 
   // https://remix.run/api/remix#json
-  return json(data);
-};
+  return json(data)
+}
 
 // https://remix.run/api/conventions#meta
 export let meta: MetaFunction = () => {
   return {
     title: "Remix Starter",
     description: "Welcome to remix!"
-  };
-};
+  }
+}
 
 // https://remix.run/guides/routing#index-routes
 export default function Index() {
-  let data = useLoaderData<IndexData>();
+  let data = useLoaderData<IndexData>()
 
   return (
     <div className="remix__page">
@@ -97,5 +97,5 @@ export default function Index() {
         </ul>
       </aside>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import type { LoaderFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
-import { Link, Outlet, useCatch, useLoaderData } from "@remix-run/react";
+import type { LoaderFunction } from "@remix-run/node"
+import { json } from "@remix-run/node"
+import { Link, Outlet, useCatch, useLoaderData } from "@remix-run/react"
 
 export default function Boundaries() {
   return (
@@ -37,5 +37,5 @@ export default function Boundaries() {
         catch boundaries bubble, too.
       </p>
     </>
-  );
+  )
 }
