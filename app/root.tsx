@@ -9,6 +9,7 @@ import {
   ScrollRestoration,
   useCatch,
 } from "@remix-run/react"
+import { MetronomeLinks } from "@metronome-sh/react"
 
 import darkStylesUrl from "~/styles/dark.css"
 import globalStylesUrl from "~/styles/global.css"
@@ -112,6 +113,7 @@ function Document({
         {title ? <title>{title}</title> : null}
         <Meta />
         <Links />
+        <MetronomeLinks />
       </head>
       <body>
         {children}
