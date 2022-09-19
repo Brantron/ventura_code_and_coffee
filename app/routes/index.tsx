@@ -55,7 +55,7 @@ export default function Index() {
           <Text>We're stoked that you're here. 🥳</Text>
         </div>
         <Header classes="block text-center pb-8">How it works</Header>
-        <section className="grid grid-cols-3 gap-12">
+        <section className="grid md:grid-rows-3 md:grid-cols-3 gap-12">
           <div>
             <Subheader>1) Bring a Laptop</Subheader>
             <Text>
