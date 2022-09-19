@@ -9,7 +9,7 @@
     "dev:css": "npm run generate:css -- --watch",
     "dev:remix": "remix dev",
     "generate:css": "npx tailwindcss -o ./app/tailwind.css",
-    "postinstall": "git config --local include.path ../.gitconfig"
+    "postinstall": "git config --local include.path ./.gitconfig"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.2",
