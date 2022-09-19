@@ -1,7 +1,7 @@
 import type { MetaFunction, LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
-import { Link, useLoaderData } from '@remix-run/react'
-import { Header, Subheader, Text } from '~/components/typography'
+import { useLoaderData } from '@remix-run/react'
+import { Link, Header, Subheader, Text } from '~/components/typography'
 
 type IndexData = {
   resources: Array<{ name: string; url: string }>
@@ -90,7 +90,9 @@ export default function Index() {
             <Text>
               Code & Coffee partners with organizers that empower our community.
               Our organizers actively reflect on learnings from{' '}
-              <a>DC Code & Coffee</a>
+              <Link href="https://technical.ly/2017/10/17/code-coffee-dc/">
+                DC Code & Coffee
+              </Link>
             </Text>
           </div>
         </section>

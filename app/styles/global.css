@@ -7,7 +7,7 @@
   --color-accent: #1773ac;
   --color-accent-copy: #fff;
   --color-background: hsl(0, 0%, 100%);
-  --color-links: #fff;
+  --color-links: red;
   --color-links-hover: hsl(213, 100%, 43%);
   --color-border: hsl(0, 0%, 82%);
   --space: 2rem;
@@ -93,16 +93,6 @@ body {
 body {
   font-family: var(--font-body);
   line-height: 1.5;
-}
-
-a {
-  color: var(--color-links);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-links-hover);
-  text-decoration: underline;
 }
 
 hr {
