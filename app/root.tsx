@@ -115,7 +115,7 @@ function Document({
         {title ? <title>{title}</title> : null}
         <Meta />
         <Links />
-        <MetronomeLinks />
+        {/* <MetronomeLinks /> */}
       </head>
       <body>
         {children}

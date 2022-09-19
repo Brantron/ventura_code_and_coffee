@@ -51,7 +51,9 @@ export default function Index() {
     <div className="pt-12">
       <main>
         <div className="pb-12">
-          <Header>Welcome to Ventura Code & Coffee</Header>
+          <Header classes="block text-center pb-8">
+            Welcome to Ventura Code & Coffee
+          </Header>
           <Text>We're stoked that you're here. 🥳</Text>
         </div>
         <Header classes="block text-center pb-8">How it works</Header>
