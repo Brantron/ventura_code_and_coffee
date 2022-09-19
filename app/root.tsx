@@ -151,7 +151,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </header>
       <div className="remix-app__main">
-        <div className="container remix-app__main-content pb-12 pt-12">
+        <div className="container mx-md max-w-screen-lg pb-12 pt-12">
           {children}
         </div>
       </div>

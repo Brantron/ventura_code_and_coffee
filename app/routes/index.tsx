@@ -54,6 +54,11 @@ export default function Index() {
           Welcome to Ventura Code & Coffee
         </Header>
         <Text>We're stoked that you're here. 🥳</Text>
+        <Text>
+          {' '}
+          Please check out our <Link href="/conduct">Code of Conduct</Link> if
+          you plan on attending
+        </Text>
       </div>
       <Header classes="block text-center pb-8">How it works</Header>
       <section className="grid md:grid-rows-3 md:grid-cols-3 gap-12">
