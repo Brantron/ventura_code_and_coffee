@@ -63,7 +63,7 @@ export default function Index() {
       <Header classes="block text-center pb-8">How it works</Header>
       <section className="grid md:grid-rows-3 md:grid-cols-3 gap-12">
         <div>
-               <Subheader>1) Bring a Laptop</Subheader>
+                <Subheader>1) Bring a Laptop</Subheader>
           <Text>
             All you need to bring is a laptop. We are VERY newbie-friendly,
             social, and look forward to developers interested in meeting more
