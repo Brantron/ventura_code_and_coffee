@@ -48,55 +48,53 @@ export default function Index() {
   let data = useLoaderData<IndexData>()
 
   return (
-    <div className="pt-12">
-      <main>
-        <div className="pb-12">
-          <Header classes="block text-center pb-8">
-            Welcome to Ventura Code & Coffee
-          </Header>
-          <Text>We're stoked that you're here. 🥳</Text>
+    <main>
+      <div className="pb-12">
+        <Header classes="block text-center pb-8">
+          Welcome to Ventura Code & Coffee
+        </Header>
+        <Text>We're stoked that you're here. 🥳</Text>
+      </div>
+      <Header classes="block text-center pb-8">How it works</Header>
+      <section className="grid md:grid-rows-3 md:grid-cols-3 gap-12">
+        <div>
+          <Subheader>1) Bring a Laptop</Subheader>
+          <Text>
+            All you need to bring is a laptop. We are VERY newbie-friendly,
+            social, and look forward to developers interested in meeting more
+            developers.
+          </Text>
         </div>
-        <Header classes="block text-center pb-8">How it works</Header>
-        <section className="grid md:grid-rows-3 md:grid-cols-3 gap-12">
-          <div>
-            <Subheader>1) Bring a Laptop</Subheader>
-            <Text>
-              All you need to bring is a laptop. We are VERY newbie-friendly,
-              social, and look forward to developers interested in meeting more
-              developers.
-            </Text>
-          </div>
-          <div>
-            <Subheader>2) Standup</Subheader>
-            <Text>
-              At ~9:20 am, we form a circle to: state our names, mention
-              programming languages/frameworks you can help with, and what you
-              need help on.
-            </Text>
-            <br />
-            <Text>
-              Immediately after we have an optional circle for jobs hiring or
-              people looking for a job
-            </Text>
-          </div>
-          <div>
-            <Subheader>3) Commence</Subheader>
-            <Text>
-              Break, grab some coffee, help a fellow coder with a side project,
-              or ask about that new JS library she just mentioned. It's all up
-              to you!
-            </Text>
-            <br />
-            <Text>
-              Code & Coffee partners with organizers that empower our community.
-              Our organizers actively reflect on learnings from{' '}
-              <Link href="https://technical.ly/2017/10/17/code-coffee-dc/">
-                DC Code & Coffee
-              </Link>
-            </Text>
-          </div>
-        </section>
-      </main>
-    </div>
+        <div>
+          <Subheader>2) Standup</Subheader>
+          <Text>
+            At ~9:20 am, we form a circle to: state our names, mention
+            programming languages/frameworks you can help with, and what you
+            need help on.
+          </Text>
+          <br />
+          <Text>
+            Immediately after we have an optional circle for jobs hiring or
+            people looking for a job
+          </Text>
+        </div>
+        <div>
+          <Subheader>3) Commence</Subheader>
+          <Text>
+            Break, grab some coffee, help a fellow coder with a side project, or
+            ask about that new JS library she just mentioned. It's all up to
+            you!
+          </Text>
+          <br />
+          <Text>
+            Code & Coffee partners with organizers that empower our community.
+            Our organizers actively reflect on learnings from{' '}
+            <Link href="https://technical.ly/2017/10/17/code-coffee-dc/">
+              DC Code & Coffee
+            </Link>
+          </Text>
+        </div>
+      </section>
+    </main>
   )
 }
