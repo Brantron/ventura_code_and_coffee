@@ -93,11 +93,24 @@ export default function Index() {
           <br />
           <Text>
             Code & Coffee partners with organizers that empower our community.
-            Our organizers actively reflect on learnings from{' '}
-            <Link href="https://technical.ly/2017/10/17/code-coffee-dc/">
-              DC Code & Coffee
-            </Link>
+            Our organizers actively reflect on learnings from our predecessors:
           </Text>
+          <br />
+          <ul className="list-decimal ml-8">
+            <li>
+              <Link href="http://novacodecoffee.com/">
+                Northern Virginia Code & Coffee
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.newyorkcodeandcoffee.com/">
+                NY Code & Coffee
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.dccodecoffee.com/">DC Code & Coffee</Link>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

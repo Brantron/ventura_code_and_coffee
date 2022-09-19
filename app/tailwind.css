@@ -585,17 +585,20 @@ video {
   }
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .ml-6 {
   margin-left: 1.5rem;
 }
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-8 {
+  margin-left: 2rem;
 }
 
 .block {
@@ -610,10 +613,6 @@ video {
   height: 1.75rem;
 }
 
-.max-w-screen-md {
-  max-width: 768px;
-}
-
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -624,6 +623,10 @@ video {
 
 .list-disc {
   list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .gap-12 {
