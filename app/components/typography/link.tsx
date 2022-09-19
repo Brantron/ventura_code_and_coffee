@@ -5,7 +5,7 @@ export default function Link({
   href,
 }: {
   children: React.ReactNode
-  href: String
+  href: string
 }) {
   return (
     <a className="text-sky-600" href={href}>
