@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node"
+import type { LinksFunction, MetaFunction } from '@remix-run/node'
 import {
   Link,
   Links,
@@ -8,28 +8,30 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-} from "@remix-run/react"
-import { MetronomeLinks } from "@metronome-sh/react"
+} from '@remix-run/react'
+import { MetronomeLinks } from '@metronome-sh/react'
 
-import darkStylesUrl from "~/styles/dark.css"
-import globalStylesUrl from "~/styles/global.css"
+import darkStylesUrl from '~/styles/dark.css'
+import globalStylesUrl from '~/styles/global.css'
+import styles from './tailwind.css'
 
 // https://remix.run/api/conventions#links
 export let links: LinksFunction = () => {
   return [
-    { rel: "stylesheet", href: globalStylesUrl },
+    { rel: 'stylesheet', href: globalStylesUrl },
+    { rel: 'stylesheet', href: styles },
     {
-      rel: "stylesheet",
+      rel: 'stylesheet',
       href: darkStylesUrl,
-      media: "(prefers-color-scheme: light)"
-    }
+      media: '(prefers-color-scheme: light)',
+    },
   ]
 }
 
 // https://remix.run/api/conventions#meta
 export let meta: MetaFunction = () => ({
-  charset: "utf-8",
-  viewport: "width=device-width,initial-scale=1",
+  charset: 'utf-8',
+  viewport: 'width=device-width,initial-scale=1',
 })
 
 // https://remix.run/api/conventions#default-export
@@ -102,10 +104,10 @@ export function CatchBoundary() {
 
 function Document({
   children,
-  title
+  title,
 }: {
-  children: React.ReactNode;
-  title?: string;
+  children: React.ReactNode
+  title?: string
 }) {
   return (
     <html lang="en">
@@ -162,6 +164,8 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 function Logo() {
   return (
-    <h1 className="logo knockout">Ventura Code & Coffee</h1>
+    <h1 className="logo knockout text-lg sm:text-3xl h-7 sm:h-10">
+      Ventura Code & Coffee
+    </h1>
   )
 }

@@ -1,6 +1,10 @@
 module.exports = {
-  extends: ["@remix-run/eslint-config", "@remix-run/eslint-config/node"],
+  extends: [
+    '@remix-run/eslint-config',
+    '@remix-run/eslint-config/node',
+    'prettier',
+  ],
   rules: {
-    semi: [2, "never"],
+    semi: [2, 'never'],
   },
 }

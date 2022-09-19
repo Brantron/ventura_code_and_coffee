@@ -1,11 +1,12 @@
-import type { MetaFunction, LoaderFunction } from "@remix-run/node"
-import { json } from "@remix-run/node"
-import { Link, useLoaderData } from "@remix-run/react"
+import type { MetaFunction, LoaderFunction } from '@remix-run/node'
+import { json } from '@remix-run/node'
+import { Link, useLoaderData } from '@remix-run/react'
+import { Header, Subheader, Text } from '~/components/typography'
 
 type IndexData = {
-  resources: Array<{ name: string; url: string }>;
-  demos: Array<{ name: string; to: string }>;
-};
+  resources: Array<{ name: string; url: string }>
+  demos: Array<{ name: string; to: string }>
+}
 
 // Loaders provide data to components and are only ever called on the server, so
 // you can connect to a database or run any server side code you want right next
@@ -16,18 +17,18 @@ export let loader: LoaderFunction = () => {
     resources: [],
     demos: [
       {
-        to: "demos/actions",
-        name: "Actions"
+        to: 'demos/actions',
+        name: 'Actions',
       },
       {
-        to: "demos/about",
-        name: "Nested Routes, CSS loading/unloading"
+        to: 'demos/about',
+        name: 'Nested Routes, CSS loading/unloading',
       },
       {
-        to: "demos/params",
-        name: "URL Params and Error Boundaries"
-      }
-    ]
+        to: 'demos/params',
+        name: 'URL Params and Error Boundaries',
+      },
+    ],
   }
 
   // https://remix.run/api/remix#json
@@ -37,8 +38,8 @@ export let loader: LoaderFunction = () => {
 // https://remix.run/api/conventions#meta
 export let meta: MetaFunction = () => {
   return {
-    title: "Remix Starter",
-    description: "Welcome to remix!"
+    title: 'Ventura Code & Coffee',
+    description: 'Welcome to Ventura Code & Coffee!',
   }
 }
 
@@ -47,10 +48,50 @@ export default function Index() {
   let data = useLoaderData<IndexData>()
 
   return (
-    <div className="remix__page">
+    <div className="pt-12">
       <main>
-        <h2>Welcome to Ventura Code & Coffee</h2>
-        <p>We're stoked that you're here. 🥳</p>
+        <div className="pb-12">
+          <Header>Welcome to Ventura Code & Coffee</Header>
+          <Text>We're stoked that you're here. 🥳</Text>
+        </div>
+        <Header classes="block text-center pb-8">How it works</Header>
+        <section className="grid grid-cols-3 gap-12">
+          <div>
+            <Subheader>1) Bring a Laptop</Subheader>
+            <Text>
+              All you need to bring is a laptop. We are VERY newbie-friendly,
+              social, and look forward to developers interested in meeting more
+              developers.
+            </Text>
+          </div>
+          <div>
+            <Subheader>2) Standup</Subheader>
+            <Text>
+              At ~9:20 am, we form a circle to: state our names, mention
+              programming languages/frameworks you can help with, and what you
+              need help on.
+            </Text>
+            <br />
+            <Text>
+              Immediately after we have an optional circle for jobs hiring or
+              people looking for a job
+            </Text>
+          </div>
+          <div>
+            <Subheader>3) Commence</Subheader>
+            <Text>
+              Break, grab some coffee, help a fellow coder with a side project,
+              or ask about that new JS library she just mentioned. It's all up
+              to you!
+            </Text>
+            <br />
+            <Text>
+              Code & Coffee partners with organizers that empower our community.
+              Our organizers actively reflect on learnings from{' '}
+              <a>DC Code & Coffee</a>
+            </Text>
+          </div>
+        </section>
       </main>
     </div>
   )

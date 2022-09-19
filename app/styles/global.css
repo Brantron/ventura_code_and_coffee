@@ -10,8 +10,9 @@
   --color-links: #fff;
   --color-links-hover: hsl(213, 100%, 43%);
   --color-border: hsl(0, 0%, 82%);
-  --font-body: -apple-system, "Segoe UI", Helvetica Neue, Helvetica, Roboto,
-    Arial, sans-serif, system-ui, "Apple Color Emoji", "Segoe UI Emoji";
+  --space: 2rem;
+  --font-body: -apple-system, 'Segoe UI', Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif, system-ui, 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
 html {
@@ -19,11 +20,27 @@ html {
 }
 
 @font-face {
-  font-family: "Pacifico";
-  src: url("../../fonts/pacifico-v22-latin-regular.woff2") format("woff2"),
-    url("../../fonts/pacifico-v22-latin-regular.woff") format("woff");
+  font-family: 'Pacifico';
+  src: url('../../fonts/pacifico-v22-latin-regular.woff2') format('woff2'),
+    url('../../fonts/pacifico-v22-latin-regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'RobotoCondensedBold';
+  src: url('../../fonts/RobotoCondensed-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('../../fonts/Roboto-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RobotoItalic';
+  src: url('../../fonts/Roboto-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('../../fonts/Roboto-Regular.ttf') format('truetype');
+}
 *,
 *::before,
 *::after {
@@ -71,8 +88,8 @@ hr {
   margin-bottom: 2rem;
 }
 
-input:where([type="text"]),
-input:where([type="search"]) {
+input:where([type='text']),
+input:where([type='search']) {
   display: block;
   border: 1px solid var(--color-border);
   width: 100%;
@@ -117,7 +134,7 @@ input:where([type="search"]) {
 }
 .logo {
   margin: 0;
-  font-family: "Pacifico";
+  font-family: 'Pacifico';
   background: linear-gradient(to right, #91aad1, #ffb1b1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -171,50 +188,13 @@ input:where([type="search"]) {
 }
 
 .remix__page {
-  --gap: 1rem;
-  --space: 2rem;
-  display: grid;
-  grid-auto-rows: min-content;
-  gap: var(--gap);
   padding-top: var(--space);
   padding-bottom: var(--space);
 }
 
 @media print, screen and (min-width: 640px) {
   .remix__page {
-    --gap: 2rem;
-    grid-auto-rows: unset;
-    grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media screen and (min-width: 1024px) {
-  .remix__page {
-    --gap: 4rem;
-  }
-}
-
-.remix__page > main > :first-child {
-  margin-top: 0;
-}
-
-.remix__page > main > :last-child {
-  margin-bottom: 0;
-}
-
-.remix__page > aside {
-  margin: 0;
-  padding: 1.5ch 2ch;
-  border: solid 1px var(--color-border);
-  border-radius: 0.5rem;
-}
-
-.remix__page > aside > :first-child {
-  margin-top: 0;
-}
-
-.remix__page > aside > :last-child {
-  margin-bottom: 0;
 }
 
 .remix__form {
