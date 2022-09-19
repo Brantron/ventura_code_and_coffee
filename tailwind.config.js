@@ -5,10 +5,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       pacifico: ['Pacifico', 'sans-serif'],
-      header: ['RobotoCondensedBold', 'sans-serif'],
-      regular: ['RobotoRegular', 'sans-serif'],
-      bold: ['RobotoBold', 'sans-serif'],
-      italic: ['RobotoItalic', 'sans-serif'],
+      header: ['Roboto Condensed', 'sans-serif'],
+      regular: ['Roboto', 'sans-serif'],
     },
   },
   plugins: [],
