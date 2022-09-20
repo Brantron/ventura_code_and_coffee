@@ -39,7 +39,8 @@ export let loader: LoaderFunction = () => {
 export let meta: MetaFunction = () => {
   return {
     title: 'Ventura Code and Coffee',
-    description: 'Welcome to Ventura Code & Coffee!',
+    description:
+      'Welcome to Ventura Code & Coffee! We meet once every other weekend to code, drink coffee, and learn from each other.',
   }
 }
 
