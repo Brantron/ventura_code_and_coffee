@@ -51,9 +51,7 @@ export default function Index() {
   return (
     <main>
       <div className="pb-12">
-        <Header classes="block text-center pb-8">
-          Welcome to Ventura Code & Coffee
-        </Header>
+        <Header classes="block text-center pb-8">Ventura Code & Coffee</Header>
         <Text>We're stoked that you're here. 🥳</Text>
         <Text>
           {' '}
@@ -66,9 +64,10 @@ export default function Index() {
         <div>
           <Subheader>1) Bring a Laptop</Subheader>
           <Text>
-            All you need to bring is a laptop. We are VERY newbie-friendly,
-            social, and look forward to developers interested in meeting more
-            developers.
+            At Ventura Code and Coffee, all you need to bring is a laptop.
+            Personal mugs are optional! We are VERY newbie-friendly, social, and
+            look forward to developers in and around Ventura County that are
+            interested in meeting more developers.
           </Text>
         </div>
         <div>
@@ -76,12 +75,8 @@ export default function Index() {
           <Text>
             At ~9:20 am, we form a circle to: state our names, mention
             programming languages/frameworks you can help with, and what you
-            need help on.
-          </Text>
-          <br />
-          <Text>
-            Immediately after we have an optional circle for jobs hiring or
-            people looking for a job
+            need help on. Optionally, you can also state if you are hiring or
+            looking for work.
           </Text>
         </div>
         <div>
