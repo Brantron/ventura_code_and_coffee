@@ -10,21 +10,13 @@ import {
   useCatch,
 } from '@remix-run/react'
 
-import darkStylesUrl from '~/styles/dark.css'
-import globalStylesUrl from '~/styles/global.css'
 import styles from './tailwind.css'
 
 // https://remix.run/api/conventions#links
 export let links: LinksFunction = () => {
   return [
-    { rel: 'stylesheet', href: globalStylesUrl },
     { rel: 'stylesheet', href: styles },
     { rel: 'shortcut icon', href: '/favicon.ico' },
-    {
-      rel: 'stylesheet',
-      href: darkStylesUrl,
-      media: '(prefers-color-scheme: light)',
-    },
   ]
 }
 
@@ -132,8 +124,12 @@ function Layout({ children }: { children: React.ReactNode }) {
     <div className="remix-app">
       <header className="remix-app__header">
         <div className="container remix-app__header-content">
-          <Link to="/" title="Remix" className="remix-app__header-home-link">
-            <Logo />
+          <Link
+            to="/"
+            title="Remix"
+            className="remix-app__header-home-link logo knockout text-lg sm:text-3xl h-7 sm:h-10"
+          >
+            Ventura Code & Coffee
           </Link>
           <nav aria-label="Main navigation" className="remix-app__header-nav">
             <ul>
@@ -161,13 +157,5 @@ function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
     </div>
-  )
-}
-
-function Logo() {
-  return (
-    <a className="logo knockout text-lg sm:text-3xl h-7 sm:h-10" href="/">
-      Ventura Code & Coffee
-    </a>
   )
 }
