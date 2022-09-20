@@ -52,15 +52,18 @@ export default function Index() {
     <main>
       <div className="pb-12">
         <Header classes="block text-center pb-8">Ventura Code & Coffee</Header>
-        <Text>We're stoked that you're here. 🥳</Text>
         <Text>
-          {' '}
-          Please check out our <Link href="/conduct">Code of Conduct</Link> if
-          you plan on attending
+          This group meets every other week on Saturdays. Until a permanent
+          location is secured, our next location can be found on{' '}
+          <Link href="https://www.meetup.com/ventura-code-coffee">
+            our Meetup page.
+          </Link>{' '}
+          Developers of all skill levels come together to work on and discuss
+          projects with each other.
         </Text>
       </div>
       <Subheader classes="block text-center pb-8">How it works</Subheader>
-      <section className="grid md:grid-rows-3 md:grid-cols-3 gap-12">
+      <section className="grid md:grid-cols-3 gap-12">
         <div>
           <Subheader>1) Bring a Laptop</Subheader>
           <Text>
@@ -108,6 +111,21 @@ export default function Index() {
             </li>
           </ul>
         </div>
+      </section>
+      <section>
+        <Subheader classes="block text-center pb-8 pt-8">
+          We're always open to questions/concerns
+        </Subheader>
+        <Text>
+          Please check out our <Link href="/conduct">Code of Conduct</Link> if
+          you plan on attending.
+        </Text>
+        <Text>
+          If you have any questions or feedback,{' '}
+          <Link href="https://forms.gle/rhdzihtMjECboMM78">
+            feel free to send it our way!
+          </Link>
+        </Text>
       </section>
     </main>
   )
