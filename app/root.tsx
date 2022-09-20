@@ -10,11 +10,13 @@ import {
   useCatch,
 } from '@remix-run/react'
 
+import globalStylesUrl from '~/styles/global.css'
 import styles from './tailwind.css'
 
 // https://remix.run/api/conventions#links
 export let links: LinksFunction = () => {
   return [
+    { rel: 'stylesheet', href: globalStylesUrl },
     { rel: 'stylesheet', href: styles },
     { rel: 'shortcut icon', href: '/favicon.ico' },
   ]
