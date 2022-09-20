@@ -9,7 +9,6 @@ import {
   ScrollRestoration,
   useCatch,
 } from '@remix-run/react'
-import { MetronomeLinks } from '@metronome-sh/react'
 
 import darkStylesUrl from '~/styles/dark.css'
 import globalStylesUrl from '~/styles/global.css'
@@ -166,8 +165,8 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 function Logo() {
   return (
-    <h1 className="logo knockout text-lg sm:text-3xl h-7 sm:h-10">
+    <a className="logo knockout text-lg sm:text-3xl h-7 sm:h-10" href="/">
       Ventura Code & Coffee
-    </h1>
+    </a>
   )
 }

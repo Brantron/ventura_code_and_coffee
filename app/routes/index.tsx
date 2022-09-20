@@ -38,7 +38,7 @@ export let loader: LoaderFunction = () => {
 // https://remix.run/api/conventions#meta
 export let meta: MetaFunction = () => {
   return {
-    title: 'Ventura Code & Coffee',
+    title: 'Ventura Code and Coffee',
     description: 'Welcome to Ventura Code & Coffee!',
   }
 }
@@ -60,7 +60,7 @@ export default function Index() {
           you plan on attending
         </Text>
       </div>
-      <Header classes="block text-center pb-8">How it works</Header>
+      <Subheader classes="block text-center pb-8">How it works</Subheader>
       <section className="grid md:grid-rows-3 md:grid-cols-3 gap-12">
         <div>
           <Subheader>1) Bring a Laptop</Subheader>
