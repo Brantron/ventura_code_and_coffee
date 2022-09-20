@@ -1,6 +1,5 @@
 import type { MetaFunction, LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
-import { useLoaderData } from '@remix-run/react'
 import { Link, Header, Subheader, Text } from '~/components/typography'
 
 type IndexData = {
@@ -91,7 +90,11 @@ export default function Index() {
       <Subheader>Reporting</Subheader>
       <Text>
         If someone makes you or anyone else feel unsafe or unwelcome, please
-        report it as soon as possible. Group organizers can be{' '}
+        report it as soon as possible.You can{' '}
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSd7-uhF295ivrhjcN7PivOERapj--t8ooMbN0b1c3iduhYLrA/viewform?usp=sf_link">
+          use our google form
+        </Link>
+        , or reach out to a group organizer. Group organizers can be{' '}
         <Link href="https://www.meetup.com/ventura-code-coffee/members/?op=leaders">
           identified on Meetup
         </Link>
