@@ -19,6 +19,7 @@ export let links: LinksFunction = () => {
   return [
     { rel: 'stylesheet', href: globalStylesUrl },
     { rel: 'stylesheet', href: styles },
+    { rel: 'shortcut icon', href: '/favicon.ico' },
     {
       rel: 'stylesheet',
       href: darkStylesUrl,
