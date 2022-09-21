@@ -8,7 +8,7 @@ export default function Link({
   href: string
 }) {
   return (
-    <a className="text-sky-600" href={href}>
+    <a className="text-[#095B93] font-bold" href={href}>
       {children}
     </a>
   )
