@@ -15,7 +15,6 @@ export default function Section({
     innerClassNames += ' pt-12'
   }
   if (!innerClasses.includes('pb-')) {
-    console.log('adding pb-12')
     innerClassNames += ' pb-12'
   }
   return (
