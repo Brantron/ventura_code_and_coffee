@@ -10,7 +10,7 @@ export default function Section({
   innerClasses?: String
 }) {
   const classNames = ` ${classes}`
-  let innerClassNames = `container mx-md max-w-screen-2xl pl-4 pr-4 ${innerClasses}`
+  let innerClassNames = `container mx-md sm:max-w-lg max-w-fit md:max-w-screen-2xl pl-4 pr-4 ${innerClasses}`
   if (!innerClasses.includes('pt-')) {
     innerClassNames += ' pt-12'
   }

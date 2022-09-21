@@ -55,9 +55,12 @@ export default function Index() {
         <Header classes="block text-center pb-8 sr-only">
           Ventura Code and Coffee
         </Header>
-        <Section innerClasses="grid grid-cols-2 lg:justify-between lg:gap-12 items-center">
+        <Section innerClasses="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 lg:justify-between lg:gap-12 items-center pt-0 md:pt-12">
           <div>
-            <Subheader classes="block text-center text-6xl text-sky-600 font-header pb-6 font-display text-m-h1 sm:text-d-h2 lg:text-[length:64px] lg:leading-[56px] xl:text-d-j">
+            <Subheader
+              classes="block text-center md:text-6xl text-sky-600 font-header pb-6 font-display text-m-h1 lg:text-[length:64px] lg:leading-[56px] xl:text-d-j"
+              size="text-3xl"
+            >
               Ventura <span style={{ color: '#095B93' }}>Code & Coffee</span> is
               the community event{' '}
               <span className="underline underline-offset-[14px] text-amber-400">

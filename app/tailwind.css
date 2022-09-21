@@ -631,6 +631,12 @@ video {
   max-width: 1536px;
 }
 
+.max-w-fit {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
 .list-inside {
   list-style-position: inside;
 }
@@ -645,6 +651,10 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .items-center {
@@ -692,6 +702,14 @@ video {
   padding-bottom: 1rem;
 }
 
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -723,6 +741,11 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -763,6 +786,14 @@ video {
     height: 2.5rem;
   }
 
+  .sm\:max-w-sm {
+    max-width: 24rem;
+  }
+
+  .sm\:max-w-lg {
+    max-width: 32rem;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -770,8 +801,34 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:max-w-screen-2xl {
+    max-width: 1536px;
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-none {
+    grid-template-rows: none;
+  }
+
+  .md\:pt-12 {
+    padding-top: 3rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 

@@ -148,9 +148,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           </nav>
         </div>
       </header>
-      <div className="remix-app__main">
-        <div className="pb-12 pt-12">{children}</div>
-      </div>
+      <div className="remix-app__main">{children}</div>
       <footer className="remix-app__footer">
         <div className="container remix-app__footer-content">
           <p>&copy; Ventura Code & Coffee</p>

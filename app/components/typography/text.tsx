@@ -8,6 +8,6 @@ export default function Text({
   large?: Boolean
 }) {
   let classNames = 'text-[#242834]'
-  classNames += large ? ' text-2xl' : ' text-base'
+  classNames += large ? ' text-lg md:text-2xl' : ' text-base'
   return <p className={classNames}>{children}</p>
 }
