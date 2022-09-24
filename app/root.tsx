@@ -36,7 +36,7 @@ export let meta: MetaFunction = () => ({
 export async function loader() {
   return json({
     ENV: {
-      REACT_APP_VERCEL_ANALYTICS_ID: process.env.REACT_APP_VERCEL_ANALYTICS_ID,
+      VERCEL_ANALYTICS_ID: process.env.VERCEL_ANALYTICS_ID,
     },
   })
 }
