@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const cssNano = process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}
 module.exports = {
   content: ['./app/**/*.{ts,tsx,jsx,js}'],
   theme: {
@@ -9,5 +10,5 @@ module.exports = {
       regular: ['Roboto', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [cssNano],
 }
