@@ -1,4 +1,5 @@
 import React from 'react'
+import withCssDefaults from '~/components/utils/withCssDefaults'
 
 export default function Section({
   children,
@@ -6,17 +7,16 @@ export default function Section({
   innerClasses = '',
 }: {
   children: React.ReactNode
-  classes?: String
-  innerClasses?: String
+  classes?: string
+  innerClasses?: string
 }) {
   const classNames = ` ${classes}`
-  let innerClassNames = `container mx-md sm:max-w-lg max-w-fit md:max-w-screen-2xl pl-4 pr-4 ${innerClasses}`
-  if (!innerClasses.includes('pt-')) {
-    innerClassNames += ' pt-12'
-  }
-  if (!innerClasses.includes('pb-')) {
-    innerClassNames += ' pb-12'
-  }
+  const innerClassNames = withCssDefaults({
+    classes:
+      'container mx-md sm:max-w-lg max-w-fit md:max-w-screen-2xl pl-4 pr-4 pt-12 pb-12',
+    overrides: innerClasses,
+  })
+
   return (
     <section className={classNames}>
       <div className={innerClassNames}>{children}</div>

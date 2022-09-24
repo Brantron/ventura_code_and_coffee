@@ -1,14 +1,18 @@
 import React from 'react'
+import withCssDefaults from '~/components/utils/withCssDefaults'
 
 export default function Subheader({
   children,
   classes = '',
-  size = 'text-2xl',
 }: {
   children: React.ReactNode
-  classes?: String
-  size?: String
+  classes?: string
+  size?: string
 }) {
-  const classNames = `pb-4 ${size} font-header text-[#242834] ${classes}`
+  const classNames = withCssDefaults({
+    classes: `pb-4 text-3xl md:text-center font-header text-[#242834]`,
+    overrides: classes,
+  })
+
   return <h2 className={classNames}>{children}</h2>
 }

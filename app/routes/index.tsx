@@ -51,16 +51,11 @@ export default function Index() {
 
   return (
     <main>
-      <div className="pb-12">
-        <Header classes="block text-center pb-8 sr-only">
-          Ventura Code and Coffee
-        </Header>
-        <Section innerClasses="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 lg:justify-between lg:gap-12 items-center pt-0 md:pt-12">
+      <Section innerClasses="pt-4 md:pt-12 pb-4 md:pb-[100px]">
+        <Header classes="sr-only">Ventura Code and Coffee</Header>
+        <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 lg:justify-between pt-0 lg:gap-12 items-center pt-0 md:pt-12">
           <div>
-            <Subheader
-              classes="block text-center md:text-6xl text-sky-600 font-header pb-6 font-display text-m-h1 lg:text-[length:64px] lg:leading-[56px] xl:text-d-j"
-              size="text-3xl"
-            >
+            <Subheader classes="block md:text-center md:text-6xl font-header pb-6 text-m-h1 lg:text-[length:64px] lg:leading-[56px] xl:text-d-j">
               Ventura <span style={{ color: '#095B93' }}>Code & Coffee</span> is
               the community event{' '}
               <span className="underline underline-offset-[14px] text-amber-400">
@@ -85,13 +80,13 @@ export default function Index() {
               come together to work on and discuss projects with each other.
             </Text>
           </div>
-        </Section>
-      </div>
+        </div>
+      </Section>
       <Section classes="bg-slate-50">
-        <Subheader classes="block text-center pb-8">How it works</Subheader>
+        <Subheader classes="block pb-8">How it works</Subheader>
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <Subheader>1) Bring a Laptop</Subheader>
+            <Subheader classes="md:text-left">1) Bring a Laptop</Subheader>
             <Text>
               At Ventura Code and Coffee, all you need to bring is a laptop.
               Personal mugs are optional! We are VERY newbie-friendly, social,
@@ -100,7 +95,7 @@ export default function Index() {
             </Text>
           </div>
           <div>
-            <Subheader>2) Standup</Subheader>
+            <Subheader classes="md:text-left">2) Standup</Subheader>
             <Text>
               At ~9:20 am, we form a circle to: state our names, mention
               programming languages/frameworks you can help with, and what you
@@ -109,7 +104,7 @@ export default function Index() {
             </Text>
           </div>
           <div>
-            <Subheader>3) Commence</Subheader>
+            <Subheader classes="md:text-left">3) Commence</Subheader>
             <Text>
               Break, grab some coffee, help a fellow coder with a side project,
               or ask about that new JS library she just mentioned. It's all up
@@ -142,8 +137,8 @@ export default function Index() {
           </div>
         </div>
       </Section>
-      <Section>
-        <Subheader classes="block text-center pb-8 pt-8">
+      <Section classes=" text-left md:text-center">
+        <Subheader classes="block pb-8 pt-8">
           We're always open to questions/concerns
         </Subheader>
         <Text>
