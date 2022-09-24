@@ -1,8 +1,8 @@
 import type { MetaFunction, LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
 import { Link, Header, Subheader, Text } from '~/components/typography'
+import Main from '~/components/layout/Main'
 import Section from '~/components/layout/section'
-import Main from '~/components/layout/main'
 
 type IndexData = {
   resources: Array<{ name: string; url: string }>
