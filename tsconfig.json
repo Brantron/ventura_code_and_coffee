@@ -15,6 +15,7 @@
     "baseUrl": ".",
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "types": ["./node_modules/network-information-types"]
   }
 }

@@ -1,14 +1,23 @@
 const vitalsUrl = 'https://vitals.vercel-analytics.com/v1/vitals'
-
-function getConnectionSpeed() {
-  return 'connection' in navigator &&
-    navigator['connection'] &&
-    'effectiveType' in navigator['connection']
-    ? navigator['connection']['effectiveType']
-    : ''
+declare global {
+  interface Window {
+    ENV: any
+  }
 }
 
-export function sendToVercelAnalytics(metric) {
+window.ENV = window.ENV || {}
+
+function getConnectionSpeed() {
+  return navigator?.connection?.effectiveType || ''
+}
+
+interface Metric {
+  id: string
+  name: string
+  value: number
+}
+
+export function sendToVercelAnalytics(metric: Metric) {
   const analyticsId = window.ENV.VERCEL_ANALYTICS_ID
   if (!analyticsId) {
     return
