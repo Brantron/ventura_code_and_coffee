@@ -1,6 +1,6 @@
 import type { MetaFunction, LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
-import Main from '~/components/layout/Main'
+import Main from '~/components/layout/main'
 import { useLoaderData } from '@remix-run/react'
 import { Link, Header, Subheader, Text } from '~/components/typography'
 import Section from '~/components/layout/section'

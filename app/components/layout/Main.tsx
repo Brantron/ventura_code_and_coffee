@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { pageView } from '~/components/utils/analytics'
+
 export default function Main({
   children,
   classes = '',
