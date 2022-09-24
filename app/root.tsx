@@ -8,7 +8,9 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
+  useLoaderData,
 } from '@remix-run/react'
+import { json } from '@remix-run/node'
 
 import globalStylesUrl from '~/styles/global.css'
 import styles from './tailwind.css'
@@ -30,6 +32,14 @@ export let meta: MetaFunction = () => ({
 
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
+
+export async function loader() {
+  return json({
+    ENV: {
+      REACT_APP_VERCEL_ANALYTICS_ID: process.env.REACT_APP_VERCEL_ANALYTICS_ID,
+    },
+  })
+}
 export default function App() {
   return (
     <Document>
@@ -103,6 +113,7 @@ function Document({
   children: React.ReactNode
   title?: string
 }) {
+  const data = useLoaderData()
   return (
     <html lang="en">
       <head>
@@ -116,6 +127,11 @@ function Document({
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.ENV = ${JSON.stringify(data.ENV)}`,
+          }}
+        />
       </body>
     </html>
   )
