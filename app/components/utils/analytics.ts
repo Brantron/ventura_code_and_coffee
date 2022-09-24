@@ -1,6 +1,6 @@
 import ReactGA from 'react-ga'
 import isDevEnvironment from './isDevEnvironment'
-ReactGA.initialize('G-3VCYJ1C1LT')
+ReactGA.initialize('333829387')
 
 const debugEvent = (data: any) => {
   if (typeof window !== 'object') return
