@@ -2,6 +2,7 @@ import type { MetaFunction, LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
 import { Link, Header, Subheader, Text } from '~/components/typography'
 import Section from '~/components/layout/section'
+import Main from '~/components/layout/main'
 
 type IndexData = {
   resources: Array<{ name: string; url: string }>
@@ -46,7 +47,7 @@ export let meta: MetaFunction = () => {
 // https://remix.run/guides/routing#index-routes
 export default function Index() {
   return (
-    <main>
+    <Main>
       <Section>
         <Header>Code of Conduct</Header>
         <Text>
@@ -105,6 +106,6 @@ export default function Index() {
           like you make our event a better place.
         </Text>
       </Section>
-    </main>
+    </Main>
   )
 }

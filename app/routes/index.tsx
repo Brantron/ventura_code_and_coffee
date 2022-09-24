@@ -1,5 +1,6 @@
 import type { MetaFunction, LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
+import Main from '~/components/layout/Main'
 import { useLoaderData } from '@remix-run/react'
 import { Link, Header, Subheader, Text } from '~/components/typography'
 import Section from '~/components/layout/section'
@@ -50,7 +51,7 @@ export default function Index() {
   let data = useLoaderData<IndexData>()
 
   return (
-    <main>
+    <Main>
       <Section innerClasses="pt-4 md:pt-12 pb-4 md:pb-[100px]">
         <Header classes="sr-only">Ventura Code and Coffee</Header>
         <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 lg:justify-between pt-0 lg:gap-12 items-center pt-0 md:pt-12">
@@ -152,6 +153,6 @@ export default function Index() {
           </Link>
         </Text>
       </Section>
-    </main>
+    </Main>
   )
 }

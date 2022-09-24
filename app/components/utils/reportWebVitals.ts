@@ -1,4 +1,5 @@
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals'
+// TODO batch these metrics [https://github.com/GoogleChrome/web-vitals#batch-multiple-reports-together]
 
 const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
