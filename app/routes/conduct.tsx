@@ -49,7 +49,7 @@ export default function Index() {
   return (
     <Main>
       <Section>
-            <Header>Code of Conduct</Header>
+        <Header>Code of Conduct</Header>
         <Text>
           Ventura Code and Coffee is dedicated to providing a harassment-free
           experience for everyone, regardless of level of experience, gender,
