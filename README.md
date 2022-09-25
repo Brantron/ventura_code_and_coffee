@@ -43,4 +43,4 @@ Please ensure the build is successful before asking for review 🙏.
 
 Q: My Pull request is failing for a prettier error. What do I do?
 
-A: This codebase is setup to ensure we adhere to a set of coding standards. Running "npm install" should configure git to fix your files when you commit them. If there are any issues, please open a [bug report](https://github.com/Brantron/ventura_code_and_coffee/issues/new?assignees=&labels=&template=bug_report.md&title=)
+A: This codebase is setup to ensure we adhere to a set of coding standards using [prettier](https://prettier.io/). Running "npm install" should configure git to fix your files when you commit them. If there are any issues, please open a [bug report](https://github.com/Brantron/ventura_code_and_coffee/issues/new?assignees=&labels=&template=bug_report.md&title=)
