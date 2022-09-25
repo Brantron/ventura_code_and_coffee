@@ -1,5 +1,5 @@
 import React from 'react'
-import withCssDefaults from '~/components/utils/withCssDefaults'
+import withCssDefaults from '~/utils/withCssDefaults'
 
 export default function Subheader({
   children,

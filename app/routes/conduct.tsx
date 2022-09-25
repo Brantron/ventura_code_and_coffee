@@ -1,5 +1,6 @@
 import type { MetaFunction, LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
+import { Urls } from '~/utils/constants'
 import { Link, Header, Subheader, Text } from '~/components/typography'
 import Main from '~/components/layout/Main'
 import Section from '~/components/layout/section'
@@ -94,16 +95,12 @@ export default function Index() {
         <Text>
           If someone makes you or anyone else feel unsafe or unwelcome, please
           report it as soon as possible.You can{' '}
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSd7-uhF295ivrhjcN7PivOERapj--t8ooMbN0b1c3iduhYLrA/viewform?usp=sf_link">
-            use our google form
-          </Link>
-          , or reach out to a group organizer. Group organizers can be{' '}
-          <Link href="https://www.meetup.com/ventura-code-coffee/members/?op=leaders">
-            identified on Meetup
-          </Link>
-          . Harassment and other code of conduct violations reduce the value of
-          our event for everyone. We want you to be happy at our event. People
-          like you make our event a better place.
+          <Link href={Urls.incidentFormUrl}>use our google form</Link>, or reach
+          out to a group organizer. Group organizers can be{' '}
+          <Link href={Urls.meetupUrl}>identified on Meetup</Link>. Harassment
+          and other code of conduct violations reduce the value of our event for
+          everyone. We want you to be happy at our event. People like you make
+          our event a better place.
         </Text>
       </Section>
     </Main>

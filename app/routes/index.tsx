@@ -1,6 +1,6 @@
 import type { MetaFunction, LoaderFunction } from '@remix-run/node'
+import { Urls } from '~/utils/constants'
 import { json } from '@remix-run/node'
-import { useLoaderData } from '@remix-run/react'
 import Main from '~/components/layout/Main'
 import { Link, Header, Subheader, Text } from '~/components/typography'
 import Section from '~/components/layout/section'
@@ -15,23 +15,7 @@ type IndexData = {
 // to the component that renders it.
 // https://remix.run/api/conventions#loader
 export let loader: LoaderFunction = () => {
-  let data: IndexData = {
-    resources: [],
-    demos: [
-      {
-        to: 'demos/actions',
-        name: 'Actions',
-      },
-      {
-        to: 'demos/about',
-        name: 'Nested Routes, CSS loading/unloading',
-      },
-      {
-        to: 'demos/params',
-        name: 'URL Params and Error Boundaries',
-      },
-    ],
-  }
+  let data: IndexData = {}
 
   // https://remix.run/api/remix#json
   return json(data)
@@ -48,11 +32,9 @@ export let meta: MetaFunction = () => {
 
 // https://remix.run/guides/routing#index-routes
 export default function Index() {
-  let data = useLoaderData<IndexData>()
-
   return (
     <Main>
-      <Section innerClasses="pt-0 pb-4 md:pb-[100px]">
+      <Section innerClasses="pt-0 pb-4 md:pb-8">
         <Header classes="sr-only">Ventura Code and Coffee</Header>
         <div className="flex flex-col gap-8 pt-8 md:pt-12 items-center pt-my-0 mx-auto">
           <div>
@@ -68,9 +50,7 @@ export default function Index() {
             <Text large>
               Our group meets every other week on Saturdays. Our upcoming
               meeting location can be found on{' '}
-              <Link href="https://www.meetup.com/ventura-code-coffee">
-                our Meetup page.
-              </Link>
+              <Link href={Urls.meetupUrl}>our Meetup page.</Link>
             </Text>
             <br />
             <Text large>
@@ -81,7 +61,7 @@ export default function Index() {
               come together to work on and discuss projects with each other.
             </Text>
             <div>
-              <Link button href="www.meetup.com">
+              <Link button href={Urls.meetupUrl}>
                 Join our next event
               </Link>
             </div>

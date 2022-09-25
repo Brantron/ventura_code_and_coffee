@@ -1,5 +1,5 @@
 import React from 'react'
-import { trackLinkClick } from '~/components/utils/analytics'
+import { trackLinkClick } from '~/utils/analytics'
 export default function Link({
   children,
   href,

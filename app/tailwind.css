@@ -670,20 +670,12 @@ video {
   list-style-type: decimal;
 }
 
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
 
 .items-center {
   align-items: center;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .gap-8 {
@@ -735,6 +727,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -761,14 +757,6 @@ video {
 
 .pb-6 {
   padding-bottom: 1.5rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
 }
 
 .text-left {
@@ -894,8 +882,8 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:pb-\[100px\] {
-    padding-bottom: 100px;
+  .md\:pb-8 {
+    padding-bottom: 2rem;
   }
 
   .md\:pt-12 {
@@ -918,11 +906,5 @@ video {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:justify-between {
-    justify-content: space-between;
   }
 }

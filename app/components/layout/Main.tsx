@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { pageView } from '~/components/utils/analytics'
+import { pageView } from '~/utils/analytics'
 
 export default function Main({
   children,
