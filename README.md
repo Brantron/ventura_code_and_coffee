@@ -1,22 +1,26 @@
-# Remix
+# Ventura Code and Coffee Website
 
-This directory is a brief example of a [Remix](https://remix.run/docs) site that can be deployed to Vercel with zero configuration.
+### Welcome!
 
-## Deploy Your Own
+This is the codebase that powers the website for the Ventura Code & Coffee meetup!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/remix&template=remix)
+[Meetup](https://www.meetup.com/ventura-code-coffee/)
+[https://www.venturacodeand.coffee]()
 
-_Live Example: https://remix-run-template.vercel.app_
+The underlying technologies here are:
+[Remix](https://remix.run/docs)
+[React](https://reactjs.org/)
+[Typescript](https://www.typescriptlang.org/)
 
 ## Development
 
-To run your Remix app locally, make sure your project's local dependencies are installed:
+To run our website locally, make sure your project's local dependencies are installed:
 
 ```sh
 npm install
 ```
 
-Afterwards, start the Remix development server like so:
+Afterwards, start the development server like so:
 
 ```sh
 npm run dev
@@ -24,4 +28,9 @@ npm run dev
 
 Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
 
-If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
+### Contributing
+
+Anyone is welcome to contribute. When your feature branch is ready for review, please open a pull request. When you open a pull request, a version of the website including your changes will be made available for review via the vercel bot comment that is added to your pull request. Please ensure the build is successful before asking for review 🙏.
+
+Example:
+![example](./vercelbot.png)
