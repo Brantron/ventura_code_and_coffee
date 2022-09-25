@@ -1,6 +1,6 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node'
+import { Urls } from '~/utils/constants'
 import {
-  Link,
   Links,
   LiveReload,
   Meta,
@@ -144,13 +144,12 @@ function Layout({ children }: { children: React.ReactNode }) {
     <div className="remix-app">
       <header className="remix-app__header sticky top-0">
         <div className="container remix-app__header-content">
-          <Link
-            to="/"
-            title="Remix"
+          <a
+            href={Urls.meetupUrl}
             className="remix-app__header-home-link font-header knockout text-2xl sm:text-3xl h-7 sm:h-10"
           >
             Ventura Code & Coffee
-          </Link>
+          </a>
           <nav aria-label="Main navigation" className="remix-app__header-nav">
             <ul>
               {/* <li>
