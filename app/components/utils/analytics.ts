@@ -1,16 +1,23 @@
 import ReactGA from 'react-ga4'
 import isDevEnvironment from './isDevEnvironment'
 
-const debugEvent = (data: any) => {
+const initializeAnalytics = () => {
   if (typeof window !== 'object') return
   if (!window.gaInitialized && window.ENV.GOOGLE_ANALYTICS_ID) {
     window.gaInitialized = true
     ReactGA.initialize(window.ENV.GOOGLE_ANALYTICS_ID)
   }
-  if (
-    isDevEnvironment() ||
-    window.location.search.includes('analytics_debug')
-  ) {
+}
+
+const isDebugMode = () => {
+  return (
+    isDevEnvironment() || window.location.search.includes('analytics_debug')
+  )
+}
+
+const debugEvent = (data: any) => {
+  initializeAnalytics()
+  if (isDebugMode()) {
     const title = (data.action ?? data.type).toUpperCase()
     console.groupCollapsed(
       '%c %s: ',

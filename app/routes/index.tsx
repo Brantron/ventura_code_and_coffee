@@ -52,11 +52,11 @@ export default function Index() {
 
   return (
     <Main>
-      <Section innerClasses="pt-4 md:pt-12 pb-4 md:pb-[100px]">
+      <Section innerClasses="pt-0 pb-4 md:pb-[100px]">
         <Header classes="sr-only">Ventura Code and Coffee</Header>
-        <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 lg:justify-between pt-0 lg:gap-12 items-center pt-0 md:pt-12">
+        <div className="grid grid-rows-2 lg:justify-between pt-0 items-center pt-0 max-w-prose my-0 mx-auto">
           <div>
-            <Subheader classes="block md:text-center md:text-6xl font-header pb-6 text-m-h1 lg:text-[length:64px] lg:leading-[56px] xl:text-d-j">
+            <Subheader classes="block md:text-center md:text-5xl font-header pb-2 ">
               Ventura <span style={{ color: '#095B93' }}>Code & Coffee</span> is
               the community event{' '}
               <span className="underline underline-offset-[14px] text-amber-400">
@@ -66,7 +66,7 @@ export default function Index() {
           </div>
           <div>
             <Text large>
-              This group meets every other week on Saturdays. Our upcoming
+              Our group meets every other week on Saturdays. Our upcoming
               meeting location can be found on{' '}
               <Link href="https://www.meetup.com/ventura-code-coffee">
                 our Meetup page.
@@ -80,6 +80,11 @@ export default function Index() {
               </span>{' '}
               come together to work on and discuss projects with each other.
             </Text>
+            <div>
+              <Link button href="www.meetup.com">
+                Join our next event
+              </Link>
+            </div>
           </div>
         </div>
       </Section>
@@ -90,9 +95,9 @@ export default function Index() {
             <Subheader classes="md:text-left">1) Bring a Laptop</Subheader>
             <Text>
               At Ventura Code and Coffee, all you need to bring is a laptop.
-              Personal mugs are optional! We are VERY newbie-friendly, social,
-              and look forward to developers in and around Ventura County that
-              are interested in meeting more developers.
+              Personal mugs are optional! We are VERY beginner friendly, social,
+              and look forward to meeting other folks in and around Ventura
+              County that are interested in meeting more developers.
             </Text>
           </div>
           <div>
@@ -138,20 +143,41 @@ export default function Index() {
           </div>
         </div>
       </Section>
-      <Section classes=" text-left md:text-center">
-        <Subheader classes="block pb-8 pt-8">
-          We're always open to questions/concerns
-        </Subheader>
+      <Section classes="text-left max-w-prose my-0 mx-auto">
+        <Subheader>About us</Subheader>
+        <Text>We're always open to questions and/or concerns</Text>
+        <br />
         <Text>
           Please check out our <Link href="/conduct">Code of Conduct</Link> if
           you plan on attending.
         </Text>
         <Text>
-          If you have any questions or feedback,{' '}
+          If you have any feedback,{' '}
           <Link href="https://forms.gle/rhdzihtMjECboMM78">
             feel free to send it our way!
           </Link>
         </Text>
+        <br />
+        <Text>
+          Code & Coffee partners with organizers that empower our community. Our
+          organizers actively reflect on learnings from our predecessors:
+        </Text>
+        <br />
+        <ul className="list-decimal ml-4">
+          <li>
+            <Link href="http://novacodecoffee.com/">
+              Northern Virginia Code & Coffee
+            </Link>
+          </li>
+          <li>
+            <Link href="https://www.newyorkcodeandcoffee.com/">
+              NY Code & Coffee
+            </Link>
+          </li>
+          <li>
+            <Link href="https://www.dccodecoffee.com/">DC Code & Coffee</Link>
+          </li>
+        </ul>
       </Section>
     </Main>
   )

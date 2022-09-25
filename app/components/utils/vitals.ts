@@ -35,7 +35,6 @@ export function sendToVercelAnalytics(metric: Metric) {
   }
 
   const blob = new Blob([new URLSearchParams(body).toString()], {
-    // This content type is necessary for `sendBeacon`
     type: 'application/x-www-form-urlencoded',
   })
   if (navigator.sendBeacon) {
