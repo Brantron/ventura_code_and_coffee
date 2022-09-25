@@ -30,4 +30,7 @@ Open up [http://localhost:3000](http://localhost:3000) and you should be ready t
 
 ### Contributing
 
-Anyone is welcome to contribute. When your feature branch is ready for review, please open a pull request. When you open a pull request, a version of the website including your changes will be made available for review. Please ensure the build is successful before asking for review 🙏.
+Anyone is welcome to contribute. When your feature branch is ready for review, please open a pull request. When you open a pull request, a version of the website including your changes will be made available for review via the vercel bot comment that is added to your pull request. Please ensure the build is successful before asking for review 🙏.
+
+Example:
+![example](./vercelbot.png)
