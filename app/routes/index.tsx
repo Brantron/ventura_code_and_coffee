@@ -53,7 +53,7 @@ export default function Index() {
   return (
     <Main>
       <Section innerClasses="pt-4 md:pt-12 pb-4 md:pb-[100px]">
-            <Header classes="sr-only">Ventura Code and Coffee</Header>
+        <Header classes="sr-only">Ventura Code and Coffee</Header>
         <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 lg:justify-between pt-0 lg:gap-12 items-center pt-0 md:pt-12">
           <div>
             <Subheader classes="block md:text-center md:text-6xl font-header pb-6 text-m-h1 lg:text-[length:64px] lg:leading-[56px] xl:text-d-j">
