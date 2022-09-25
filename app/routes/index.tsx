@@ -54,7 +54,7 @@ export default function Index() {
     <Main>
       <Section innerClasses="pt-0 pb-4 md:pb-[100px]">
         <Header classes="sr-only">Ventura Code and Coffee</Header>
-        <div className="grid grid-rows-2 lg:justify-between pt-0 items-center pt-my-0 mx-auto">
+        <div className="flex flex-col gap-8 pt-8 md:pt-12 items-center pt-my-0 mx-auto">
           <div>
             <Subheader classes="block md:text-center md:text-5xl font-header pb-2 ">
               Ventura <span style={{ color: '#095B93' }}>Code & Coffee</span> is
