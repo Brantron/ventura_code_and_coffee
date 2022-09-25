@@ -5,7 +5,6 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      pacifico: ['Pacifico', 'sans-serif'],
       header: ['Roboto Condensed', 'sans-serif'],
       regular: ['Roboto', 'sans-serif'],
     },

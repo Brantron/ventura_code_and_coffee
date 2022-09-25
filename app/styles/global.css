@@ -25,13 +25,6 @@ html {
   font-weight: 700;
   src: local(''), url('../../fonts/founders-grotesk-bold.woff2') format('woff2');
 }
-@font-face {
-  font-family: 'Pacifico';
-  font-display: swap;
-  src: url('../../fonts/pacifico-v22-latin-regular.woff2') format('woff2'),
-    url('../../fonts/pacifico-v22-latin-regular.woff') format('woff');
-}
-
 /* roboto-regular - latin */
 @font-face {
   font-family: 'Roboto';
@@ -145,13 +138,6 @@ input:where([type='search']) {
 
 .remix-app > * {
   width: 100%;
-}
-.logo {
-  margin: 0;
-  font-family: 'Pacifico';
-  background: linear-gradient(to right, #91aad1, #ffb1b1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .remix-app__header {
   padding-top: 1rem;

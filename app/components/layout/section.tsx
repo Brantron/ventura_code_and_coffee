@@ -12,8 +12,7 @@ export default function Section({
 }) {
   const classNames = ` ${classes}`
   const innerClassNames = withCssDefaults({
-    classes:
-      'container mx-md sm:max-w-lg max-w-fit md:max-w-screen-2xl pl-4 pr-4 pt-12 pb-12',
+    classes: 'pl-4 pr-4 container mx-md 0 max-w-prose',
     overrides: innerClasses,
   })
 

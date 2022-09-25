@@ -54,7 +54,7 @@ export default function Index() {
     <Main>
       <Section innerClasses="pt-0 pb-4 md:pb-[100px]">
         <Header classes="sr-only">Ventura Code and Coffee</Header>
-        <div className="grid grid-rows-2 lg:justify-between pt-0 items-center pt-0 max-w-prose my-0 mx-auto">
+        <div className="grid grid-rows-2 lg:justify-between pt-0 items-center pt-my-0 mx-auto">
           <div>
             <Subheader classes="block md:text-center md:text-5xl font-header pb-2 ">
               Ventura <span style={{ color: '#095B93' }}>Code & Coffee</span> is
@@ -88,9 +88,9 @@ export default function Index() {
           </div>
         </div>
       </Section>
-      <Section classes="bg-slate-50">
+      <Section classes="bg-slate-50 pt-12 pb-12">
         <Subheader classes="block pb-8">How it works</Subheader>
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="flex flex-col gap-y-4">
           <div>
             <Subheader classes="md:text-left">1) Bring a Laptop</Subheader>
             <Text>
@@ -123,7 +123,7 @@ export default function Index() {
               predecessors:
             </Text>
             <br />
-            <ul className="list-decimal ml-8">
+            <ul className="list-decimal ml-4">
               <li>
                 <Link href="http://novacodecoffee.com/">
                   Northern Virginia Code & Coffee
@@ -143,7 +143,7 @@ export default function Index() {
           </div>
         </div>
       </Section>
-      <Section classes="text-left max-w-prose my-0 mx-auto">
+      <Section classes="text-left max-w-prose my-0 mx-auto  pt-12 pb-12">
         <Subheader>About us</Subheader>
         <Text>We're always open to questions and/or concerns</Text>
         <br />

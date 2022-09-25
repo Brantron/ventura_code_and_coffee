@@ -142,12 +142,12 @@ function Document({
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="remix-app">
-      <header className="remix-app__header">
+      <header className="remix-app__header sticky top-0">
         <div className="container remix-app__header-content">
           <Link
             to="/"
             title="Remix"
-            className="remix-app__header-home-link logo knockout text-lg sm:text-3xl h-7 sm:h-10"
+            className="remix-app__header-home-link font-header knockout text-2xl sm:text-3xl h-7 sm:h-10"
           >
             Ventura Code & Coffee
           </Link>
