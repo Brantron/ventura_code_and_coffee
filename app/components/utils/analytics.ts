@@ -11,8 +11,12 @@ const debugEvent = (data: any) => {
     isDevEnvironment() ||
     window.location.search.includes('analytics_debug')
   ) {
-    console.log('🧙‍♂️🧙‍♂️🧙‍♂️  ANALYTICS  🧙‍♂️🧙‍♂️🧙‍♂️')
-    console.table(data)
+    const title = (data.action ?? data.type).toUpperCase()
+    console.groupCollapsed(`🧙‍♂️🧙‍♂️🧙‍♂️  ${title}  🧙‍♂️🧙‍♂️🧙‍♂️`)
+    for (const [key, value] of Object.entries(data)) {
+      console.log(`%c ${key}: ${value}`, 'color:#2E8B57;font-weight:bolder;')
+    }
+    console.groupEnd()
   }
 }
 
