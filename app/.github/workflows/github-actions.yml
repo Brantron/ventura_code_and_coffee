@@ -1,7 +1,7 @@
 - name: Vercel Action
   uses: amondnet/vercel-action@v25.1.0
 - name: Prettify code
-  uses: creyD/prettier_action@v4.2
+  uses: actions/checkout@v2 # Check out the repository first.
+  uses: actionsx/prettier@v2
   with:
-    dry: True
-    github_token: ${{ github.token }}
+    args: --check .
