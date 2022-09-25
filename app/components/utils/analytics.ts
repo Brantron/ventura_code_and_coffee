@@ -12,9 +12,17 @@ const debugEvent = (data: any) => {
     window.location.search.includes('analytics_debug')
   ) {
     const title = (data.action ?? data.type).toUpperCase()
-    console.groupCollapsed(`📊  ${title}  📊`)
+    console.groupCollapsed(
+      '%c %s: ',
+      'color: #43B02A; font-style: italic; font-weight: normal',
+      `📊  ${title}  📊`
+    )
     for (const [key, value] of Object.entries(data)) {
-      console.log(`%c ${key}: ${value}`, 'color:#2E8B57;font-weight:bolder;')
+      console.log(
+        `%c ${key}: %c'${value}'`,
+        'color:black;font-weight:bolder;',
+        'color:#2E8B57;font-weight:bolder;'
+      )
     }
     console.groupEnd()
   }

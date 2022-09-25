@@ -2,6 +2,7 @@ const vitalsUrl = 'https://vitals.vercel-analytics.com/v1/vitals'
 declare global {
   interface Window {
     ENV: any
+    gaInitialized?: boolean
   }
 }
 
