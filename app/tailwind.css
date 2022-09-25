@@ -619,10 +619,6 @@ video {
   display: block;
 }
 
-.table {
-  display: table;
-}
-
 .grid {
   display: grid;
 }
