@@ -4,13 +4,13 @@
 
 This is the codebase that powers the website for the Ventura Code & Coffee meetup!
 
-[Meetup](https://www.meetup.com/ventura-code-coffee/)
-[https://www.venturacodeand.coffee]()
+- [Website](https://www.venturacodeand.coffee)
+- [Meetup](https://www.meetup.com/ventura-code-coffee/)
 
 The underlying technologies here are:
-[Remix](https://remix.run/docs)
-[React](https://reactjs.org/)
-[Typescript](https://www.typescriptlang.org/)
+- [Remix](https://remix.run/docs)
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
 
 ## Development
 
