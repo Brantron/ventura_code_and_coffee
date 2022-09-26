@@ -1,9 +1,10 @@
 name: End-to-end tests
-  on:
-    pull_request:
-    push:
-      branches-ignore:
-        - main
+
+on:
+  pull_request:
+  push:
+    branches-ignore:
+      - main
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
