@@ -192,11 +192,6 @@ input:where([type='search']) {
   padding-bottom: var(--space);
 }
 
-@media print, screen and (min-width: 640px) {
-  .remix__page {
-  }
-}
-
 .remix__form {
   display: flex;
   flex-direction: column;
@@ -218,6 +213,7 @@ input:where([type='search']) {
     linear-gradient(110deg, #c5e7d7 34%, #88d8b0 34%);
   background-size: 400%;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
 }
 .knockout {
@@ -226,7 +222,7 @@ input:where([type='search']) {
   -moz-animation: Gradient 5s ease infinite;
 }
 
-@-webkit-keyframes Gradient {
+@keyframes Gradient {
   0% {
     background-position: 10% 50%;
   }

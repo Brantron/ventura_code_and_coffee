@@ -5,20 +5,13 @@ import Main from '~/components/layout/Main'
 import { Link, Header, Subheader, Text } from '~/components/typography'
 import Section from '~/components/layout/section'
 
-type IndexData = {
-  resources: Array<{ name: string; url: string }>
-  demos: Array<{ name: string; to: string }>
-}
-
 // Loaders provide data to components and are only ever called on the server, so
 // you can connect to a database or run any server side code you want right next
 // to the component that renders it.
 // https://remix.run/api/conventions#loader
 export let loader: LoaderFunction = () => {
-  let data: IndexData = {}
-
   // https://remix.run/api/remix#json
-  return json(data)
+  return json({})
 }
 
 // https://remix.run/api/conventions#meta
@@ -34,7 +27,7 @@ export let meta: MetaFunction = () => {
 export default function Index() {
   return (
     <Main>
-      <Section innerClasses="pt-0 pb-4 md:pb-8">
+      <Section innerClasses="pt-0 pb-8">
         <Header classes="sr-only">Ventura Code and Coffee</Header>
         <div className="flex flex-col gap-8 pt-8 md:pt-12 items-center pt-my-0 mx-auto">
           <div>
