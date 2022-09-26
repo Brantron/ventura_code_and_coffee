@@ -16,6 +16,6 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "types": ["./node_modules/network-information-types"]
+    "types": ["./node_modules/network-information-types", "cypress"]
   }
 }

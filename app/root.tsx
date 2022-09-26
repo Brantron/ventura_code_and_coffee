@@ -145,6 +145,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <header className="remix-app__header sticky top-0">
         <div className="container remix-app__header-content">
           <a
+            data-test-id="logo"
             href={Urls.meetupUrl}
             className="remix-app__header-home-link font-header knockout text-2xl sm:text-3xl h-7 sm:h-10"
           >

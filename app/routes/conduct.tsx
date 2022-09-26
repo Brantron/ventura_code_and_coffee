@@ -17,20 +17,7 @@ type IndexData = {
 export let loader: LoaderFunction = () => {
   let data: IndexData = {
     resources: [],
-    demos: [
-      {
-        to: 'demos/actions',
-        name: 'Actions',
-      },
-      {
-        to: 'demos/about',
-        name: 'Nested Routes, CSS loading/unloading',
-      },
-      {
-        to: 'demos/params',
-        name: 'URL Params and Error Boundaries',
-      },
-    ],
+    demos: [],
   }
 
   // https://remix.run/api/remix#json
@@ -95,8 +82,10 @@ export default function Index() {
         <Text>
           If someone makes you or anyone else feel unsafe or unwelcome, please
           report it as soon as possible.You can{' '}
-          <Link href={Urls.incidentFormUrl}>use our google form</Link>, or reach
-          out to a group organizer. Group organizers can be{' '}
+          <Link href={Urls.incidentFormUrl} testId="googleForm">
+            use our google form
+          </Link>
+          , or reach out to a group organizer. Group organizers can be{' '}
           <Link href={Urls.meetupUrl}>identified on Meetup</Link>. Harassment
           and other code of conduct violations reduce the value of our event for
           everyone. We want you to be happy at our event. People like you make
