@@ -54,7 +54,7 @@ export default function Index() {
               come together to work on and discuss projects with each other.
             </Text>
             <div>
-              <Link button href={Urls.meetupUrl}>
+              <Link button href={Urls.meetupUrl} testId="joinButton">
                 Join our next event
               </Link>
             </div>
@@ -121,8 +121,11 @@ export default function Index() {
         <Text>We're always open to questions and/or concerns</Text>
         <br />
         <Text>
-          Please check out our <Link href="/conduct">Code of Conduct</Link> if
-          you plan on attending.
+          Please check out our{' '}
+          <Link href="/conduct" testId="conductLink">
+            Code of Conduct
+          </Link>{' '}
+          if you plan on attending.
         </Text>
         <Text>
           If you have any feedback,{' '}
