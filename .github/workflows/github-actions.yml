@@ -1,2 +1,7 @@
 - name: Vercel Action
   uses: amondnet/vercel-action@v25.1.0
+  on:
+    pull_request:
+    push:
+      branches-ignore:
+        - main
