@@ -22,7 +22,7 @@ export default function Link({
   }
   return (
     <a
-      className={`text-sky-600 hover:text-sky-800 hover:no-underline font-bold `}
+      className={`text-sky-600 hover:text-sky-800 hover:no-underline font-bold`}
       href={href}
       onClick={() => trackLinkClick(href)}
     >
