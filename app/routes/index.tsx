@@ -31,9 +31,10 @@ export default function Index() {
         <div className="flex flex-col gap-8 pt-8 md:pt-12 items-center pt-my-0 mx-auto">
           <div>
             <Subheader classes="block md:text-center md:text-5xl font-header pb-2 ">
-              Ventura <span style={{ color: '#095B93' }}>Code & Coffee</span> is
+              Ventura{' '}
+              <span className="italic text-[#205493]">Code & Coffee</span> is
               the community event{' '}
-              <span className="underline underline-offset-[14px] text-amber-400">
+              <span className="underline underline-offset-[14px] text-[#2e8540]">
                 you've been looking for.
               </span>
             </Subheader>
@@ -47,7 +48,7 @@ export default function Index() {
             <br />
             <Text large>
               Developers of{' '}
-              <span className="text-amber-400 font-bold underline underline-offset-6">
+              <span className="text-[#2e8540] font-bold underline underline-offset-6">
                 all skill levels
               </span>{' '}
               come together to work on and discuss projects with each other.
