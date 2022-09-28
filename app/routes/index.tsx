@@ -22,7 +22,6 @@ export let meta: MetaFunction = () => {
       'Welcome to Ventura Code & Coffee! We meet once every other weekend to code, drink coffee, and learn from each other.',
   }
 }
-
 // https://remix.run/guides/routing#index-routes
 export default function Index() {
   return (

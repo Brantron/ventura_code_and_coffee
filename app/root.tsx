@@ -1,4 +1,5 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node'
+import { DynamicLinks } from 'remix-utils'
 import { Urls } from '~/utils/constants'
 import {
   Links,
@@ -24,6 +25,10 @@ export let links: LinksFunction = () => {
   ]
 }
 
+export let dynamicLinks = ({ data }: { data: { href: string } }) => {
+  return [{ rel: 'canonical', href: data.href }]
+}
+export let handle = { dynamicLinks }
 // https://remix.run/api/conventions#meta
 export let meta: MetaFunction = () => ({
   charset: 'utf-8',
@@ -33,8 +38,11 @@ export let meta: MetaFunction = () => ({
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
 
-export async function loader() {
+export async function loader({ request }: { request: Request }) {
+  const url = new URL(request.url)
+
   return json({
+    href: url.origin + url.pathname,
     ENV: {
       VERCEL_ANALYTICS_ID: process.env.VERCEL_ANALYTICS_ID,
       GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
@@ -121,6 +129,7 @@ function Document({
       <head>
         {title ? <title>{title}</title> : null}
         <Meta />
+        <DynamicLinks />
         <Links />
         {/* <MetronomeLinks /> */}
       </head>
