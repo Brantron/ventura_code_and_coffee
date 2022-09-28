@@ -5,7 +5,10 @@ const initializeAnalytics = () => {
   if (typeof window !== 'object') return
   if (!window.gaInitialized && window.ENV.GOOGLE_ANALYTICS_ID) {
     window.gaInitialized = true
-    ReactGA.initialize(window.ENV.GOOGLE_ANALYTICS_ID)
+    ReactGA.initialize(window.ENV.GOOGLE_ANALYTICS_ID, {
+      // @ts-ignore: Unreachable code error
+      standardImplementation: true,
+    })
   }
 }
 

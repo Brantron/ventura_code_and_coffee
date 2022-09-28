@@ -25,8 +25,23 @@ export let links: LinksFunction = () => {
   ]
 }
 
-export let dynamicLinks = ({ data }: { data: { href: string } }) => {
-  return [{ rel: 'canonical', href: data.href }]
+interface LoaderData {
+  href: string
+  ENV: {
+    GOOGLE_ANALYTICS_ID?: string
+    VERCEL_ANALYTICS_ID?: string
+    environment: string
+  }
+}
+
+export let dynamicLinks = ({ data }: { data: LoaderData }) => {
+  return [
+    { rel: 'canonical', href: data.href },
+    {
+      rel: 'script',
+      href: `https://www.googletagmanager.com/gtag/js?id=G-${data.ENV.GOOGLE_ANALYTICS_ID}`,
+    },
+  ]
 }
 export let handle = { dynamicLinks }
 // https://remix.run/api/conventions#meta
@@ -40,15 +55,16 @@ export let meta: MetaFunction = () => ({
 
 export async function loader({ request }: { request: Request }) {
   const url = new URL(request.url)
-
-  return json({
+  const data: LoaderData = {
     href: url.origin + url.pathname,
     ENV: {
       VERCEL_ANALYTICS_ID: process.env.VERCEL_ANALYTICS_ID,
       GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
       environment: process.env.NODE_ENV,
     },
-  })
+  }
+
+  return json(data)
 }
 export default function App() {
   return (
@@ -143,6 +159,21 @@ function Document({
             __html: `window.ENV = ${JSON.stringify(data.ENV)}`,
           }}
         />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${data.ENV.GOOGLE_ANALYTICS_ID}`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${data.ENV.GOOGLE_ANALYTICS_ID}');
+        `,
+          }}
+        ></script>
       </body>
     </html>
   )
