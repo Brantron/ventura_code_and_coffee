@@ -35,7 +35,13 @@ interface LoaderData {
 }
 
 export let dynamicLinks = ({ data }: { data: LoaderData }) => {
-  return [{ rel: 'canonical', href: data.href }]
+  return [
+    { rel: 'canonical', href: data.href },
+    {
+      rel: 'script',
+      href: `https://www.googletagmanager.com/gtag/js?id=G-${data.ENV.GOOGLE_ANALYTICS_ID}`,
+    },
+  ]
 }
 export let handle = { dynamicLinks }
 // https://remix.run/api/conventions#meta
@@ -153,6 +159,19 @@ function Document({
             __html: `window.ENV = ${JSON.stringify(data.ENV)}`,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+            ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+            ;c.parentNode.insertBefore(a,c)
+            })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+              window.gtag = galite
+            gtag('create', '${data.ENV.GOOGLE_ANALYTICS_ID}', 'auto');
+            gtag('send', 'pageview');
+        `,
+          }}
+        ></script>
       </body>
     </html>
   )

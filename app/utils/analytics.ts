@@ -1,4 +1,4 @@
-import galite from 'ga-lite'
+import ReactGA from 'react-ga4'
 import isDevEnvironment from './isDevEnvironment'
 
 const initializeAnalytics = () => {
@@ -37,7 +37,7 @@ const debugEvent = (data: any) => {
 export const pageView = () => {
   const url = window.location.pathname + window.location.search
   debugEvent({ type: 'pageView', url })
-  galite('send', 'pageview')
+  ReactGA.send({ hitType: 'pageview', page: url })
 }
 
 export const trackLinkClick = (url: string) => {
@@ -47,13 +47,13 @@ export const trackLinkClick = (url: string) => {
 interface EventObject {
   category: string
   action: string
-  label: string
+  label?: string
   value?: number
 }
 
 const trackEvent = (data: EventObject) => {
   debugEvent({ type: 'event', ...data })
-  galite('send', 'event', data.category, data.action, data.label)
+  ReactGA.event(data)
 }
 // EXAMPLE EVENTS:
 // ReactGA.event({
