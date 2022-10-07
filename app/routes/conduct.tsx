@@ -36,7 +36,7 @@ export let meta: MetaFunction = () => {
 export default function Index() {
   return (
     <Main>
-      <Section>
+      <Section classes="my-4">
         <Header>Code of Conduct</Header>
         <Text>
           Ventura Code and Coffee is dedicated to providing a harassment-free

@@ -179,9 +179,9 @@ function Document({
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="remix-app">
-      <header className="remix-app__header sticky top-0">
-        <div className="container remix-app__header-content">
+    <div className="leading-6 font-sans">
+      <header className="py-4 bg-[#205493] sticky top-0">
+        <div className="pl-4 pr-4 mx-md 0 max-w-prose remix-app__header-content mx-auto 0 max-w-prose">
           <a
             data-test-id="logo"
             href={Urls.meetupUrl}
@@ -189,24 +189,11 @@ function Layout({ children }: { children: React.ReactNode }) {
           >
             Ventura Code & Coffee
           </a>
-          <nav aria-label="Main navigation" className="remix-app__header-nav">
-            <ul>
-              {/* <li>
-                <Link to="/">Home</Link>
-              </li> */}
-              {/* <li>
-                <a href="https://remix.run/docs">Remix Docs</a>
-              </li>
-              <li>
-                <a href="https://github.com/remix-run/remix">GitHub</a>
-              </li> */}
-            </ul>
-          </nav>
         </div>
       </header>
       <div className="remix-app__main">{children}</div>
-      <footer className="remix-app__footer">
-        <div className="container remix-app__footer-content">
+      <footer className="py-4 bg-[#205493]">
+        <div className="pr-4 pl-4 mx-auto max-w-prose text-white max-w-prose">
           <p>&copy; Ventura Code & Coffee</p>
         </div>
       </footer>

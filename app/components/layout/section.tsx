@@ -12,7 +12,7 @@ export default function Section({
 }) {
   const classNames = ` ${classes}`
   const innerClassNames = withCssDefaults({
-    classes: 'pl-4 pr-4 container mx-md 0 max-w-prose',
+    classes: 'pl-4 pr-4 md:pl-10 md:pr-10 mx-auto 0 max-w-prose',
     overrides: innerClasses,
   })
 
