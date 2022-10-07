@@ -1,10 +1,11 @@
-import ReactGA from 'react-ga4'
+import ReactGA from 'react-ga'
 import isDevEnvironment from './isDevEnvironment'
 
 const initializeAnalytics = () => {
   if (typeof window !== 'object') return
   if (!window.gaInitialized && window.ENV.GOOGLE_ANALYTICS_ID) {
     window.gaInitialized = true
+    ReactGA.initialize(window.ENV.GOOGLE_ANALYTICS_ID)
   }
 }
 
@@ -37,7 +38,7 @@ const debugEvent = (data: any) => {
 export const pageView = () => {
   const url = window.location.pathname + window.location.search
   debugEvent({ type: 'pageView', url })
-  ReactGA.send({ hitType: 'pageview', page: url })
+  ReactGA.pageview(url)
 }
 
 export const trackLinkClick = (url: string) => {
