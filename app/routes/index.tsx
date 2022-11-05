@@ -57,6 +57,14 @@ export default function Index() {
               <Link button href={Urls.meetupUrl} testId="joinButton">
                 Join our next event
               </Link>
+              <Link
+                button
+                href={Urls.discordInviteUrl}
+                testId="discordButton"
+                styles="ml-4 inline-block bg-[#2e8540]"
+              >
+                Join us on Discord
+              </Link>
             </div>
           </div>
         </div>

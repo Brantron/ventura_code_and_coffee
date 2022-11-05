@@ -690,6 +690,11 @@ video {
   background-color: rgb(7 89 133 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#2e8540\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 133 64 / var(--tw-bg-opacity));
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
