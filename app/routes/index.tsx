@@ -61,7 +61,7 @@ export default function Index() {
                 button
                 href={Urls.discordInviteUrl}
                 testId="discordButton"
-                styles="ml-4 inline-block bg-[#2e8540]"
+                styles="sm:ml-4 inline-block bg-[#2e8540]"
               >
                 Join us on Discord
               </Link>
