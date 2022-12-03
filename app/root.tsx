@@ -181,10 +181,9 @@ function Layout({ children }: { children: React.ReactNode }) {
       <footer className="py-4 bg-[#205493]">
         <div className="pr-4 pl-4 mx-auto max-w-prose text-white max-w-prose">
           <p>&copy; Ventura Code & Coffee </p>
-          <a 
-          href="https://github.com/Brantron/ventura_code_and_coffee"
-          >Visit our Github!</a>
-          
+          <a href="https://github.com/Brantron/ventura_code_and_coffee">
+            Visit our Github!
+          </a>
         </div>
       </footer>
     </div>
