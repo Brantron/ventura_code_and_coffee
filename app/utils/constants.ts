@@ -1,5 +1,5 @@
 const Urls = {
-  discordInviteUrl: 'https://discord.com/invite/y22umwT3',
+  discordInviteUrl: 'https://discord.gg/9K4pRNWP2R',
   meetupUrl: 'https://www.meetup.com/ventura-code-coffee/',
   meetupLeadersUrl:
     'https://www.meetup.com/ventura-code-coffee/members/?op=leaders',
